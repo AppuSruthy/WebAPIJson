@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebAPIProject.Models.comments>
+@{
+    ViewBag.Title = "Comments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Comments</h2>
+@{
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            
+
+            <th>Name</th>
+            <th>Email</th>
+            <th>Body</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.id</th>
+                
+
+                <th>@item.name</th>
+                <th>@item.email</th>
+                <th>@item.body</th>
+
+            </tr>
+        }
+    </table>
+}
